@@ -121,15 +121,19 @@ override open func viewDidLoad() {
                 }
                 
                 if YPConfig.showsPhotoFilters {
-                    let filterVC = YPPhotoFiltersVC(inputPhoto: photo,
-                                                    isFromSelectionVC: false)
-                    // Show filters and then crop
-                    filterVC.didSave = { outputMedia in
-                        if case let YPMediaItem.photo(outputPhoto) = outputMedia {
-                            showCropVC(photo: outputPhoto, completion: completion)
-                        }
-                    }
-                    self?.pushViewController(filterVC, animated: false)
+//                    let filterVC = YPPhotoFiltersVC(inputPhoto: photo,
+//                                                    isFromSelectionVC: false)
+//                    // Show filters and then crop
+//                    filterVC.didSave = { outputMedia in
+//                        if case let YPMediaItem.photo(outputPhoto) = outputMedia {
+//                            showCropVC(photo: outputPhoto, completion: completion)
+//                        }
+//                    }
+//                    self?.pushViewController(filterVC, animated: false)
+                    
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Image", bundle: nil)
+                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "TakenImageViewController") as! TakenImageViewController
+                    self?.navigationController?.pushViewController(newViewController, animated: true)
                 } else {
                     showCropVC(photo: photo, completion: completion)
                 }
