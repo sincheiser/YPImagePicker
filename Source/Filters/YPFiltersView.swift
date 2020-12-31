@@ -13,8 +13,13 @@ class YPFiltersView: UIView {
     let imageView = UIImageView()
     var collectionView: UICollectionView!
     var filtersLoader: UIActivityIndicatorView!
+    var btnRetakeContainer = UIView()
+    var imgRetake = UIImageView()
     var btnRetake = UIButton()
+    var btnConfirmContainer = UIView()
+    var imgConfirm = UIImageView()
     var btnConfirm = UIButton()
+    
     fileprivate let collectionViewContainer: UIView = UIView()
     
     convenience init() {
@@ -28,8 +33,14 @@ class YPFiltersView: UIView {
         sv(
             imageView,
             collectionViewContainer.sv(
-                btnRetake,
-                btnConfirm
+                btnRetakeContainer.sv(
+                    imgRetake,
+                    btnRetake
+                ),
+                btnConfirmContainer.sv(
+                    imgConfirm,
+                    btnConfirm
+                )
             )
         )
         
@@ -42,16 +53,17 @@ class YPFiltersView: UIView {
         imageView.Bottom == collectionViewContainer.Top
 //        |collectionView.centerVertically().height(160)
 //        filtersLoader.centerInContainer()
-        |-sideMargin-btnRetake.top(15)
-        btnConfirm.top(15)-sideMargin-|
+        |-sideMargin-btnRetakeContainer.top(15)-btnConfirmContainer.top(15)-sideMargin-|
+        btnRetake.followEdges(imgRetake)
+        btnConfirm.followEdges(imgConfirm)
         btnRetake.size(80)
         btnRetake.setBackgroundColor(.white, forState: .normal)
         btnRetake.setTitleColor(.blue, for: .normal)
-        btnRetake.setTitle("Retake", for: .normal)
+        btnRetake.setTitle("Ulangi", for: .normal)
         btnConfirm.size(80)
         btnConfirm.setBackgroundColor(.white, forState: .normal)
         btnConfirm.setTitleColor(.blue, for: .normal)
-        btnConfirm.setTitle("Confirm", for: .normal)
+        btnConfirm.setTitle("Gunakan", for: .normal)
         
         imageView.heightEqualsWidth()
         
