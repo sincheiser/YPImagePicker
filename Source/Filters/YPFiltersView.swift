@@ -13,6 +13,8 @@ class YPFiltersView: UIView {
     let imageView = UIImageView()
     var collectionView: UICollectionView!
     var filtersLoader: UIActivityIndicatorView!
+    var btnRetake = UIButton()
+    var btnConfirm = UIButton()
     fileprivate let collectionViewContainer: UIView = UIView()
     
     convenience init() {
@@ -26,8 +28,8 @@ class YPFiltersView: UIView {
         sv(
             imageView,
             collectionViewContainer.sv(
-                filtersLoader,
-                collectionView
+                btnRetake,
+                btnConfirm
             )
         )
         
@@ -38,8 +40,12 @@ class YPFiltersView: UIView {
         |-sideMargin-collectionViewContainer-sideMargin-|
         collectionViewContainer.bottom(0)
         imageView.Bottom == collectionViewContainer.Top
-        |collectionView.centerVertically().height(160)|
-        filtersLoader.centerInContainer()
+//        |collectionView.centerVertically().height(160)
+//        filtersLoader.centerInContainer()
+        btnRetake.size(80)
+        btnRetake.setTitle("Retake", for: .normal)
+        btnConfirm.size(80)
+        btnConfirm.setTitle("Retake", for: .normal)
         
         imageView.heightEqualsWidth()
         
