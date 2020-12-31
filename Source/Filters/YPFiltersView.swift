@@ -42,8 +42,8 @@ class YPFiltersView: UIView {
         imageView.Bottom == collectionViewContainer.Top
 //        |collectionView.centerVertically().height(160)
 //        filtersLoader.centerInContainer()
-        |-sideMargin-btnRetake.top(15)-sideMargin-|
-        |-sideMargin-btnConfirm.top(15)-sideMargin-|
+        |-sideMargin-btnRetake.top(15)
+        btnConfirm.top(15)-sideMargin-|
         btnRetake.size(80)
         btnRetake.setBackgroundColor(.white, forState: .normal)
         btnRetake.setTitleColor(.blue, for: .normal)
