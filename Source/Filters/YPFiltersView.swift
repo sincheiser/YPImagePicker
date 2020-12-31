@@ -51,16 +51,21 @@ class YPFiltersView: UIView {
         |-sideMargin-collectionViewContainer-sideMargin-|
         collectionViewContainer.bottom(0)
         imageView.Bottom == collectionViewContainer.Top
-//        |collectionView.centerVertically().height(160)
-//        filtersLoader.centerInContainer()
+        
         |-sideMargin-btnRetakeContainer.top(15)-btnConfirmContainer.top(15)-sideMargin-|
-        btnRetake.followEdges(imgRetake)
-        btnConfirm.followEdges(imgConfirm)
+        imgRetake.Bottom == btnRetake.Top
+        imgConfirm.Bottom == btnConfirm.Top
+        
         btnRetake.size(80)
+        imgRetake.image = UIImage(named: "ic_cancel")
+        imgRetake.size(45)
         btnRetake.setBackgroundColor(.white, forState: .normal)
         btnRetake.setTitleColor(.blue, for: .normal)
         btnRetake.setTitle("Ulangi", for: .normal)
+        
         btnConfirm.size(80)
+        imgConfirm.image = UIImage(named: "ic_confirm")
+        imgConfirm.size(45)
         btnConfirm.setBackgroundColor(.white, forState: .normal)
         btnConfirm.setTitleColor(.blue, for: .normal)
         btnConfirm.setTitle("Gunakan", for: .normal)
