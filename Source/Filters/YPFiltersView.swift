@@ -32,15 +32,13 @@ class YPFiltersView: UIView {
         
         sv(
             imageView,
-            collectionViewContainer.sv(
-                btnRetakeContainer.sv(
-                    imgRetake,
-                    btnRetake
-                ),
-                btnConfirmContainer.sv(
-                    imgConfirm,
-                    btnConfirm
-                )
+            btnRetakeContainer.sv(
+                imgRetake,
+                btnRetake
+            ),
+            btnConfirmContainer.sv(
+                imgConfirm,
+                btnConfirm
             )
         )
         
