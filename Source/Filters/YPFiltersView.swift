@@ -32,13 +32,15 @@ class YPFiltersView: UIView {
         
         sv(
             imageView,
-            btnRetakeContainer.sv(
-                imgRetake,
-                btnRetake
-            ),
-            btnConfirmContainer.sv(
-                imgConfirm,
-                btnConfirm
+            collectionViewContainer.sv(
+                btnRetakeContainer.sv(
+                    imgRetake,
+                    btnRetake
+                ),
+                btnConfirmContainer.sv(
+                    imgConfirm,
+                    btnConfirm
+                )
             )
         )
         
@@ -50,9 +52,11 @@ class YPFiltersView: UIView {
         collectionViewContainer.bottom(0)
         imageView.Bottom == collectionViewContainer.Top
         
-        |-sideMargin-btnRetakeContainer.top(15)-btnConfirmContainer.top(15)-sideMargin-|
+        |-sideMargin-btnRetakeContainer.top(15)-sideMargin-btnConfirmContainer.top(15)-sideMargin-|
         imgRetake.Bottom == btnRetake.Top
+        imgRetake.bottom(0)
         imgConfirm.Bottom == btnConfirm.Top
+        imgConfirm.bottom(0)
         
         btnRetake.size(80)
         imgRetake.image = UIImage(named: "ic_cancel")
