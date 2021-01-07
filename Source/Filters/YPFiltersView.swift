@@ -13,6 +13,7 @@ class YPFiltersView: UIView {
     let imageView = UIImageView()
     var collectionView: UICollectionView!
     var filtersLoader: UIActivityIndicatorView!
+    var btnContainer = UIView()
     var btnRetakeContainer = UIView()
     var imgRetake = UIImageView()
     var btnRetake = UIButton()
@@ -32,9 +33,13 @@ class YPFiltersView: UIView {
         
         sv(
             imageView,
-            btnRetakeContainer.sv(
-                btnRetake,
-                btnConfirm
+            btnContainer.sv(
+                btnRetakeContainer.sv(
+                    btnRetake
+                ),
+                btnConfirmContainer.sv(
+                    btnConfirm
+                )
             )
         )
         
@@ -42,30 +47,18 @@ class YPFiltersView: UIView {
         let sideMargin: CGFloat = isIphone4 ? 20 : 0
         
         |-sideMargin-imageView.top(0)-sideMargin-|
-        |-sideMargin-btnRetakeContainer-sideMargin-|
-        imageView.Bottom == btnRetakeContainer.Top
-        btnRetakeContainer.bottom(0)
+        |-sideMargin-btnContainer-sideMargin-|
+        imageView.Bottom == btnContainer.Top
+        btnContainer.bottom(0)
         
-        |-sideMargin-btnRetake
-        btnConfirm-sideMargin-|
-//        imageView.Bottom == btnRetakeContainer.Top
-//        btnRetake.Bottom == btnConfirm.Top
+        |-sideMargin-btnRetakeContainer
+        btnConfirmContainer-sideMargin-|
         
-        
-//        |-sideMargin-btnRetakeContainer.top(15)
-//        btnConfirmContainer-|
-//        btnRetake.Bottom == imgRetake.Top
-//        imgConfirm.Bottom == btnConfirm.Top
-
-//        imgRetake.image = UIImage(named: "ic_cancel")
-//        imgRetake.size(45)
         btnRetake.size(80)
         btnRetake.setBackgroundColor(.white, forState: .normal)
         btnRetake.setTitleColor(.blue, for: .normal)
         btnRetake.setTitle("Ulangi", for: .normal)
 
-//        imgConfirm.image = UIImage(named: "ic_confirm")
-//        imgConfirm.size(45)
         btnConfirm.size(80)
         btnConfirm.setBackgroundColor(.white, forState: .normal)
         btnConfirm.setTitleColor(.blue, for: .normal)
