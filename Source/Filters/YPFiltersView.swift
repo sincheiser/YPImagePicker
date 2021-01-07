@@ -59,6 +59,9 @@ class YPFiltersView: UIView {
         btnRetake.top(0).bottom(0)
         btnConfirm.top(0).bottom(0)
         
+        btnRetakeContainer.backgroundColor = UIColor.red
+        btnConfirmContainer.backgroundColor = UIColor.blue
+        
         btnRetake.size(80)
         btnRetake.setBackgroundColor(.white, forState: .normal)
         btnRetake.setTitleColor(.blue, for: .normal)
