@@ -55,20 +55,20 @@ class YPFiltersView: UIView {
 //        btnConfirmContainer-|
 //        btnRetake.Bottom == imgRetake.Top
 //        imgConfirm.Bottom == btnConfirm.Top
-//
-//        btnRetake.size(80)
+
 //        imgRetake.image = UIImage(named: "ic_cancel")
 //        imgRetake.size(45)
-//        btnRetake.setBackgroundColor(.white, forState: .normal)
-//        btnRetake.setTitleColor(.blue, for: .normal)
-//        btnRetake.setTitle("Ulangi", for: .normal)
-//
-//        btnConfirm.size(80)
+        btnRetake.size(80)
+        btnRetake.setBackgroundColor(.white, forState: .normal)
+        btnRetake.setTitleColor(.blue, for: .normal)
+        btnRetake.setTitle("Ulangi", for: .normal)
+
 //        imgConfirm.image = UIImage(named: "ic_confirm")
 //        imgConfirm.size(45)
-//        btnConfirm.setBackgroundColor(.white, forState: .normal)
-//        btnConfirm.setTitleColor(.blue, for: .normal)
-//        btnConfirm.setTitle("Gunakan", for: .normal)
+        btnConfirm.size(80)
+        btnConfirm.setBackgroundColor(.white, forState: .normal)
+        btnConfirm.setTitleColor(.blue, for: .normal)
+        btnConfirm.setTitle("Gunakan", for: .normal)
         
         imageView.heightEqualsWidth()
         
