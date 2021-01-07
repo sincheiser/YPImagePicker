@@ -42,13 +42,11 @@ class YPFiltersView: UIView {
         let sideMargin: CGFloat = isIphone4 ? 20 : 0
         
         |-sideMargin-imageView.top(0)-sideMargin-|
-        |-sideMargin-btnRetakeContainer-sideMargin-|
+        |-sideMargin-btnRetakeContainer.top(18)-sideMargin-|
         btnRetakeContainer.bottom(0)
         
         |-sideMargin-btnRetake-sideMargin-|
         |-sideMargin-btnConfirm-sideMargin-|
-        imageView.Bottom == btnRetakeContainer.Top
-        btnRetake.Bottom == btnConfirm.Top
         
         
 //        |-sideMargin-btnRetakeContainer.top(15)
