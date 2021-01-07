@@ -34,12 +34,8 @@ class YPFiltersView: UIView {
             imageView,
             collectionViewContainer.sv(
                 btnRetakeContainer.sv(
-                    imgRetake,
-                    btnRetake
-                ),
-                btnConfirmContainer.sv(
-                    imgConfirm,
-                    btnConfirm
+                    btnRetake,
+                    imgRetake
                 )
             )
         )
@@ -54,7 +50,7 @@ class YPFiltersView: UIView {
         
         |-sideMargin-btnRetakeContainer.top(15)
         btnConfirmContainer-|
-        imgRetake.Bottom == btnRetake.Top
+        btnRetake.Bottom == imgRetake.Top
         imgConfirm.Bottom == btnConfirm.Top
         
         btnRetake.size(80)
