@@ -32,11 +32,9 @@ class YPFiltersView: UIView {
         
         sv(
             imageView,
-            collectionViewContainer.sv(
-                btnRetakeContainer.sv(
-                    btnRetake,
-                    imgRetake
-                )
+            btnRetakeContainer.sv(
+                btnRetake,
+                btnConfirm
             )
         )
         
@@ -44,28 +42,33 @@ class YPFiltersView: UIView {
         let sideMargin: CGFloat = isIphone4 ? 20 : 0
         
         |-sideMargin-imageView.top(0)-sideMargin-|
-        |-sideMargin-collectionViewContainer-sideMargin-|
-        collectionViewContainer.bottom(0)
-        imageView.Bottom == collectionViewContainer.Top
+        |-sideMargin-btnRetakeContainer-sideMargin-|
+        btnRetakeContainer.bottom(0)
         
-        |-sideMargin-btnRetakeContainer.top(15)
-        btnConfirmContainer-|
-        btnRetake.Bottom == imgRetake.Top
-        imgConfirm.Bottom == btnConfirm.Top
+        |-sideMargin-btnRetake-sideMargin-|
+        |-sideMargin-btnConfirm-sideMargin-|
+        imageView.Bottom == btnRetakeContainer.Top
+        btnRetake.Bottom == btnConfirm.Top
         
-        btnRetake.size(80)
-        imgRetake.image = UIImage(named: "ic_cancel")
-        imgRetake.size(45)
-        btnRetake.setBackgroundColor(.white, forState: .normal)
-        btnRetake.setTitleColor(.blue, for: .normal)
-        btnRetake.setTitle("Ulangi", for: .normal)
         
-        btnConfirm.size(80)
-        imgConfirm.image = UIImage(named: "ic_confirm")
-        imgConfirm.size(45)
-        btnConfirm.setBackgroundColor(.white, forState: .normal)
-        btnConfirm.setTitleColor(.blue, for: .normal)
-        btnConfirm.setTitle("Gunakan", for: .normal)
+//        |-sideMargin-btnRetakeContainer.top(15)
+//        btnConfirmContainer-|
+//        btnRetake.Bottom == imgRetake.Top
+//        imgConfirm.Bottom == btnConfirm.Top
+//
+//        btnRetake.size(80)
+//        imgRetake.image = UIImage(named: "ic_cancel")
+//        imgRetake.size(45)
+//        btnRetake.setBackgroundColor(.white, forState: .normal)
+//        btnRetake.setTitleColor(.blue, for: .normal)
+//        btnRetake.setTitle("Ulangi", for: .normal)
+//
+//        btnConfirm.size(80)
+//        imgConfirm.image = UIImage(named: "ic_confirm")
+//        imgConfirm.size(45)
+//        btnConfirm.setBackgroundColor(.white, forState: .normal)
+//        btnConfirm.setTitleColor(.blue, for: .normal)
+//        btnConfirm.setTitle("Gunakan", for: .normal)
         
         imageView.heightEqualsWidth()
         
