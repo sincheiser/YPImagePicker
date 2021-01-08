@@ -47,8 +47,8 @@ class YPFiltersView: UIView {
         imageView.Bottom == btnContainer.Top
         btnContainer.bottom(0)
         
-        |-sideMargin-btnRetake-sideMargin-|
-        |-sideMargin-btnConfirm-sideMargin-|
+        |-sideMargin-btnRetake
+        btnConfirm-sideMargin-|
         imageView.Bottom == btnRetakeContainer.Top
         
         btnRetake.size(80)
