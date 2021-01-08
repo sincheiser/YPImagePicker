@@ -56,9 +56,6 @@ class YPFiltersView: UIView {
         |-sideMargin-btnRetakeContainer
         btnConfirmContainer-sideMargin-|
         
-        btnRetake.top(0).bottom(0)
-        btnConfirm.top(0).bottom(0)
-        
         btnRetakeContainer.backgroundColor = UIColor.red
         btnConfirmContainer.backgroundColor = UIColor.blue
         
