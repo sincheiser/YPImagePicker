@@ -61,7 +61,7 @@ class YPFiltersView: UIView {
         btnRetake.Bottom == imgRetake.Top
         imgRetake.size(120)
         imgRetake.contentMode = .scaleAspectFit
-        imgRetake.image = UIImage(named: "yp_arrow_down")
+        imgRetake.image = UIImage(named: "ic_confirm")
         
         btnRetake.size(80)
         btnRetake.setBackgroundColor(.white, forState: .normal)
