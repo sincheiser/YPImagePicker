@@ -20,6 +20,7 @@ class YPFiltersView: UIView {
     var btnConfirmContainer = UIView()
     var imgConfirm = UIImageView()
     var btnConfirm = UIButton()
+    var stackView = UIStackView()
     
     fileprivate let collectionViewContainer: UIView = UIView()
     
@@ -34,12 +35,15 @@ class YPFiltersView: UIView {
         sv(
             imageView,
             btnContainer.sv(
-                btnRetakeContainer.sv(
-                    btnRetake,
-                    imgRetake
-                ),
-                btnConfirmContainer.sv(
-                    btnConfirm
+                stackView.sv(
+                    btnRetakeContainer.sv(
+                        btnRetake,
+                        imgRetake
+                    ),
+                    btnConfirmContainer.sv(
+                        btnConfirm,
+                        imgConfirm
+                    )
                 )
             )
         )
@@ -52,8 +56,10 @@ class YPFiltersView: UIView {
         imageView.Bottom == btnContainer.Top
         btnContainer.bottom(0)
         
-        |-sideMargin-btnRetakeContainer
-        btnConfirmContainer-sideMargin-|
+        |-sideMargin-stackView-sideMargin-|
+        stackView.centerInContainer()
+        stackView.spacing = 20.0
+        stackView.axis = .vertical
         
         |-sideMargin-btnRetake-sideMargin-|
         |-sideMargin-btnConfirm-sideMargin-|
@@ -61,7 +67,7 @@ class YPFiltersView: UIView {
         btnRetake.Bottom == imgRetake.Top
         imgRetake.size(120)
         imgRetake.contentMode = .scaleAspectFit
-        imgRetake.image = UIImage(named: "ic_confirm")
+        imgRetake.image = imageFromBundle("ic_cancel")
         imgRetake.backgroundColor = UIColor.blue
         
         btnRetake.size(80)
@@ -69,6 +75,12 @@ class YPFiltersView: UIView {
         btnRetake.setTitleColor(.blue, for: .normal)
         btnRetake.setTitle("Ulangi", for: .normal)
 
+        btnConfirm.Bottom == imgConfirm.Top
+        imgConfirm.size(120)
+        imgConfirm.contentMode = .scaleAspectFit
+        imgConfirm.image = imageFromBundle("ic_confirm")
+        imgConfirm.backgroundColor = UIColor.blue
+        
         btnConfirm.size(80)
         btnConfirm.setBackgroundColor(.white, forState: .normal)
         btnConfirm.setTitleColor(.blue, for: .normal)
