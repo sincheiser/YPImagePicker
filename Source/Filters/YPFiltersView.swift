@@ -60,6 +60,8 @@ class YPFiltersView: UIView {
         stackView.centerInContainer()
         stackView.spacing = 20.0
         stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.alignment = .center
         
         |-sideMargin-btnRetake-sideMargin-|
         |-sideMargin-btnConfirm-sideMargin-|
