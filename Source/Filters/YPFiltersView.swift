@@ -62,6 +62,7 @@ class YPFiltersView: UIView {
         imgRetake.size(120)
         imgRetake.contentMode = .scaleAspectFit
         imgRetake.image = UIImage(named: "ic_confirm")
+        imgRetake.backgroundColor = UIColor.blue
         
         btnRetake.size(80)
         btnRetake.setBackgroundColor(.white, forState: .normal)
