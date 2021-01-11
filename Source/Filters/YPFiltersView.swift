@@ -58,7 +58,6 @@ class YPFiltersView: UIView {
         |-sideMargin-btnRetake-sideMargin-|
         |-sideMargin-btnConfirm-sideMargin-|
         
-        |-sideMargin-imgRetake-sideMargin-|
         btnRetake.Bottom == imgRetake.Top
         imgRetake.contentMode = .scaleAspectFit
         imgRetake.image = UIImage(named: "yp_arrow_down")
