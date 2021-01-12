@@ -59,7 +59,7 @@ class YPFiltersView: UIView {
         |-sideMargin-stackView-sideMargin-|
         stackView.centerInContainer()
         stackView.spacing = 20.0
-        stackView.axis = .vertical
+        stackView.axis = .horizontal
         stackView.distribution = .fillEqually
         stackView.alignment = .center
         
