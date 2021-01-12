@@ -20,7 +20,6 @@ class YPFiltersView: UIView {
     var btnConfirmContainer = UIView()
     var imgConfirm = UIImageView()
     var btnConfirm = UIButton()
-    var stackView = UIStackView()
     
     fileprivate let collectionViewContainer: UIView = UIView()
     
@@ -35,15 +34,13 @@ class YPFiltersView: UIView {
         sv(
             imageView,
             btnContainer.sv(
-                stackView.sv(
-                    btnRetakeContainer.sv(
-                        btnRetake,
-                        imgRetake
-                    ),
-                    btnConfirmContainer.sv(
-                        btnConfirm,
-                        imgConfirm
-                    )
+                btnRetakeContainer.sv(
+                    btnRetake,
+                    imgRetake
+                ),
+                btnConfirmContainer.sv(
+                    btnConfirm,
+                    imgConfirm
                 )
             )
         )
@@ -56,12 +53,8 @@ class YPFiltersView: UIView {
         imageView.Bottom == btnContainer.Top
         btnContainer.bottom(0)
         
-        |-sideMargin-stackView-sideMargin-|
-        stackView.centerInContainer()
-        stackView.spacing = 20.0
-        stackView.axis = .horizontal
-        stackView.distribution = .fillEqually
-        stackView.alignment = .center
+        |-sideMargin-btnRetakeContainer
+        btnConfirmContainer-sideMargin-|
         
         |-sideMargin-btnRetake-sideMargin-|
         |-sideMargin-btnConfirm-sideMargin-|
