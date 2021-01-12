@@ -53,8 +53,8 @@ class YPFiltersView: UIView {
         imageView.Bottom == btnContainer.Top
         btnContainer.bottom(0)
         
-        |-sideMargin-btnRetakeContainer
-        btnConfirmContainer-sideMargin-|
+        |-sideMargin-btnRetakeContainer.left(15).top(15)
+        btnConfirmContainer.right(15).top(15)-sideMargin-|
         
         |-sideMargin-btnRetake-sideMargin-|
         |-sideMargin-btnConfirm-sideMargin-|
@@ -63,7 +63,6 @@ class YPFiltersView: UIView {
         imgRetake.size(120)
         imgRetake.contentMode = .scaleAspectFit
         imgRetake.image = imageFromBundle("ic_cancel")
-        imgRetake.backgroundColor = UIColor.blue
         
         btnRetake.size(80)
         btnRetake.setBackgroundColor(.white, forState: .normal)
