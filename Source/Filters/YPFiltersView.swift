@@ -51,15 +51,16 @@ class YPFiltersView: UIView {
         |-sideMargin-imageView.top(0)-sideMargin-|
         |-sideMargin-btnContainer-sideMargin-|
         imageView.Bottom == btnContainer.Top
+        btnContainer.top(25)
         btnContainer.bottom(0)
         
-        |-sideMargin-btnRetakeContainer.left(15).top(15)
-        btnConfirmContainer.right(15).top(15)-sideMargin-|
+        |-sideMargin-btnRetakeContainer.left(15)
+        btnConfirmContainer.right(15)-sideMargin-|
         
         |-sideMargin-btnRetake-sideMargin-|
         |-sideMargin-btnConfirm-sideMargin-|
         
-        btnRetake.Bottom == imgRetake.Top
+        imgRetake.Bottom == btnRetake.Top
         imgRetake.size(40)
         imgRetake.contentMode = .scaleAspectFit
         imgRetake.image = imageFromBundle("ic_cancel")
@@ -69,7 +70,7 @@ class YPFiltersView: UIView {
         btnRetake.setTitleColor(.blue, for: .normal)
         btnRetake.setTitle("Ulangi", for: .normal)
 
-        btnConfirm.Bottom == imgConfirm.Top
+        imgConfirm.Bottom == btnConfirm.Top
         imgConfirm.size(40)
         imgConfirm.contentMode = .scaleAspectFit
         imgConfirm.image = imageFromBundle("ic_confirm")
