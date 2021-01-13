@@ -56,21 +56,23 @@ class YPFiltersView: UIView {
         |-sideMargin-btnRetakeContainer.top(0).left(15).bottom(0)
         btnConfirmContainer.top(0).right(15).bottom(0)-sideMargin-|
         
+        |-sideMargin-imgRetake-sideMargin-|
+        |-sideMargin-imgConfirm-sideMargin-|
         |-sideMargin-btnRetake-sideMargin-|
         |-sideMargin-btnConfirm-sideMargin-|
         
         imgRetake.Bottom == btnRetake.Top
-        imgRetake.size(40)
+        imgRetake.height(50).width(50)
         imgRetake.contentMode = .scaleAspectFit
         imgRetake.image = imageFromBundle("ic_cancel")
         
-        btnRetake.height(50).width(50).top(20)
+        btnRetake.height(50).width(50)
         btnRetake.setBackgroundColor(.white, forState: .normal)
         btnRetake.setTitleColor(.blue, for: .normal)
         btnRetake.setTitle("Ulangi", for: .normal)
 
         imgConfirm.Bottom == btnConfirm.Top
-        imgConfirm.size(40)
+        imgConfirm.height(50).width(50)
         imgConfirm.contentMode = .scaleAspectFit
         imgConfirm.image = imageFromBundle("ic_confirm")
         imgConfirm.backgroundColor = UIColor.blue
