@@ -53,8 +53,8 @@ class YPFiltersView: UIView {
         imageView.Bottom == btnContainer.Top
         btnContainer.bottom(0)
         
-        |-sideMargin-btnRetakeContainer.top(0).left(15)
-        btnConfirmContainer.top(0).right(15)-sideMargin-|
+        |-sideMargin-btnRetakeContainer.top(0).left(15).bottom(0)
+        btnConfirmContainer.top(0).right(15).bottom(0)-sideMargin-|
         
         |-sideMargin-btnRetake-sideMargin-|
         |-sideMargin-btnConfirm-sideMargin-|
