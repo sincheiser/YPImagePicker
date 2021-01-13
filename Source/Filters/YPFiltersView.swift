@@ -64,7 +64,7 @@ class YPFiltersView: UIView {
         imgRetake.contentMode = .scaleAspectFit
         imgRetake.image = imageFromBundle("ic_cancel")
         
-        btnRetake.height(16).width(44)
+        btnRetake.height(20).width(50).bottom(0)
         btnRetake.setBackgroundColor(.white, forState: .normal)
         btnRetake.setTitleColor(.blue, for: .normal)
         btnRetake.setTitle("Ulangi", for: .normal)
@@ -75,7 +75,7 @@ class YPFiltersView: UIView {
         imgConfirm.image = imageFromBundle("ic_confirm")
         imgConfirm.backgroundColor = UIColor.blue
         
-        btnConfirm.height(16).width(44)
+        btnConfirm.height(20).width(50).bottom(0)
         btnConfirm.setBackgroundColor(.white, forState: .normal)
         btnConfirm.setTitleColor(.blue, for: .normal)
         btnConfirm.setTitle("Gunakan", for: .normal)
