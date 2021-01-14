@@ -97,6 +97,10 @@ open class YPPhotoFiltersVC: UIViewController, IsMediaFilterVC, UIGestureRecogni
         touchDownGR.delegate = self
         v.imageView.addGestureRecognizer(touchDownGR)
         v.imageView.isUserInteractionEnabled = true
+        
+        // Setup touch up button retake & button confirm
+        v.btnRetake.addTarget(self, action: #selector(cancel), for: .touchUpInside)
+        v.btnConfirm.addTarget(self, action: #selector(save), for: .touchUpInside)
     }
     
     // MARK: Setup - ⚙️
