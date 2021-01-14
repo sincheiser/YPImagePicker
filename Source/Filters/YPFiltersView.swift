@@ -84,6 +84,7 @@ class YPFiltersView: UIView {
         imgRetake.image = imageFromBundle("ic_cancel")
         
         lblRetake.Bottom == btnRetakeContainer.Bottom
+        lblRetake.top(4)
         lblRetake.text = "Ulangi"
         lblRetake.textColor = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1)
         lblRetake.font = UIFont(name: "Raleway-SemiBold", size: 14)
@@ -96,6 +97,7 @@ class YPFiltersView: UIView {
         imgConfirm.image = imageFromBundle("ic_confirm")
         
         lblConfirm.Bottom == btnConfirmContainer.Bottom
+        lblConfirm.top(4)
         lblConfirm.text = "Gunakan"
         lblConfirm.textColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
         lblRetake.font = UIFont(name: "Raleway-SemiBold", size: 14)
