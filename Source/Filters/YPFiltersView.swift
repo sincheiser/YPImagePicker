@@ -20,6 +20,8 @@ class YPFiltersView: UIView {
     var btnConfirmContainer = UIView()
     var imgConfirm = UIImageView()
     var btnConfirm = UIButton()
+    var btn1 = UIButton()
+    var btn2 = UIButton()
     
     fileprivate let collectionViewContainer: UIView = UIView()
     
@@ -36,11 +38,13 @@ class YPFiltersView: UIView {
             btnContainer.sv(
                 btnRetakeContainer.sv(
                     imgRetake,
-                    btnRetake
+                    btnRetake,
+                    btn1
                 ),
                 btnConfirmContainer.sv(
                     imgConfirm,
-                    btnConfirm
+                    btnConfirm,
+                    btn2
                 )
             )
         )
@@ -64,6 +68,14 @@ class YPFiltersView: UIView {
         |-sideMargin-imgConfirm-sideMargin-|
         |-sideMargin-btnRetake-sideMargin-|
         |-sideMargin-btnConfirm-sideMargin-|
+        
+        |-sideMargin-btn1-sideMargin-|
+        |-sideMargin-btn2-sideMargin-|
+        
+        btn1.Top == btnRetakeContainer.Top
+        btn1.Bottom == btnRetakeContainer.Bottom
+        btn2.Top == btnConfirmContainer.Top
+        btn2.Bottom == btnConfirmContainer.Bottom
         
         imgRetake.Top == btnRetakeContainer.Top
         imgRetake.Bottom == btnRetake.Top
