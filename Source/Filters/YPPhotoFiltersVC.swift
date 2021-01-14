@@ -101,14 +101,6 @@ open class YPPhotoFiltersVC: UIViewController, IsMediaFilterVC, UIGestureRecogni
         // Setup touch up button retake & button confirm
         v.btnRetake.addTarget(self, action: #selector(back), for: .touchUpInside)
         v.btnConfirm.addTarget(self, action: #selector(save), for: .touchUpInside)
-        v.btn1.addTarget(self, action: #selector(cancel), for: .touchUpInside)
-        v.btn2.addTarget(self, action: #selector(save), for: .touchUpInside)
-        
-        let tapImgRetake = UITapGestureRecognizer(target: self, action: #selector(back))
-        v.imgRetake.addGestureRecognizer(tapImgRetake)
-        
-        let tapImgConfirm = UITapGestureRecognizer(target: self, action: #selector(save))
-        v.imgConfirm.addGestureRecognizer(tapImgConfirm)
     }
     
     // MARK: Setup - ⚙️

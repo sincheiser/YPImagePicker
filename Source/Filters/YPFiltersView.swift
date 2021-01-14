@@ -16,12 +16,12 @@ class YPFiltersView: UIView {
     var btnContainer = UIView()
     var btnRetakeContainer = UIView()
     var imgRetake = UIImageView()
+    var lblRetake = UILabel()
     var btnRetake = UIButton()
     var btnConfirmContainer = UIView()
     var imgConfirm = UIImageView()
+    var lblConfirm = UILabel()
     var btnConfirm = UIButton()
-    var btn1 = UIButton()
-    var btn2 = UIButton()
     
     fileprivate let collectionViewContainer: UIView = UIView()
     
@@ -38,10 +38,12 @@ class YPFiltersView: UIView {
             btnContainer.sv(
                 btnRetakeContainer.sv(
                     imgRetake,
+                    lblRetake,
                     btnRetake
                 ),
                 btnConfirmContainer.sv(
                     imgConfirm,
+                    lblConfirm,
                     btnConfirm
                 )
             )
@@ -64,31 +66,39 @@ class YPFiltersView: UIView {
         
         |-sideMargin-imgRetake-sideMargin-|
         |-sideMargin-imgConfirm-sideMargin-|
+        |-sideMargin-lblRetake-sideMargin-|
+        |-sideMargin-lblConfirm-sideMargin-|
         |-sideMargin-btnRetake-sideMargin-|
         |-sideMargin-btnConfirm-sideMargin-|
         
+        
+        btnRetake.Top == btnRetakeContainer.Top
+        btnRetake.Bottom == btnRetakeContainer.Bottom
+        btnConfirm.Top == btnConfirmContainer.Top
+        btnConfirm.Bottom == btnConfirmContainer.Bottom
+        
         imgRetake.Top == btnRetakeContainer.Top
-        imgRetake.Bottom == btnRetake.Top
+        imgRetake.Bottom == lblRetake.Top
         imgRetake.width(40).height(40)
         imgRetake.contentMode = .scaleAspectFit
         imgRetake.image = imageFromBundle("ic_cancel")
         
-        btnRetake.Bottom == btnRetakeContainer.Bottom
-        btnRetake.setTitleColor(UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1), for: .normal)
-        btnRetake.setTitle("Ulangi", for: .normal)
-        btnRetake.titleLabel?.font = UIFont(name: "Helvetica", size: 14)
+        lblRetake.Bottom == btnRetakeContainer.Bottom
+        lblRetake.text = "Ulangi"
+        lblRetake.textColor = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1)
+        lblRetake.font = UIFont(name: "Helvetica", size: 14)
 
         imgConfirm.Top == btnConfirmContainer.Top
-        imgConfirm.Bottom == btnConfirm.Top
+        imgConfirm.Bottom == lblConfirm.Top
         imgConfirm.width(40).height(40)
         imgConfirm.centerHorizontally()
         imgConfirm.contentMode = .scaleAspectFit
         imgConfirm.image = imageFromBundle("ic_confirm")
         
-        btnConfirm.Bottom == btnConfirmContainer.Bottom
-        btnConfirm.setTitleColor(UIColor(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
-        btnConfirm.setTitle("Gunakan", for: .normal)
-        btnConfirm.titleLabel?.font = UIFont(name: "Helvetica", size: 14)
+        lblConfirm.Bottom == btnConfirmContainer.Bottom
+        lblConfirm.text = "Gunakan"
+        lblConfirm.textColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+        lblRetake.font = UIFont(name: "Helvetica", size: 14)
         
         imageView.heightEqualsWidth()
         
