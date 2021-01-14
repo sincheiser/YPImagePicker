@@ -38,13 +38,11 @@ class YPFiltersView: UIView {
             btnContainer.sv(
                 btnRetakeContainer.sv(
                     imgRetake,
-                    btnRetake,
-                    btn1
+                    btnRetake
                 ),
                 btnConfirmContainer.sv(
                     imgConfirm,
-                    btnConfirm,
-                    btn2
+                    btnConfirm
                 )
             )
         )
@@ -68,14 +66,6 @@ class YPFiltersView: UIView {
         |-sideMargin-imgConfirm-sideMargin-|
         |-sideMargin-btnRetake-sideMargin-|
         |-sideMargin-btnConfirm-sideMargin-|
-        
-        |-sideMargin-btn1-sideMargin-|
-        |-sideMargin-btn2-sideMargin-|
-        
-        btn1.Top == btnRetakeContainer.Top
-        btn1.Bottom == btnRetakeContainer.Bottom
-        btn2.Top == btnConfirmContainer.Top
-        btn2.Bottom == btnConfirmContainer.Bottom
         
         imgRetake.Top == btnRetakeContainer.Top
         imgRetake.Bottom == btnRetake.Top
