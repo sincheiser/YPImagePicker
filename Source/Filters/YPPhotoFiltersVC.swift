@@ -70,9 +70,9 @@ open class YPPhotoFiltersVC: UIViewController, IsMediaFilterVC, UIGestureRecogni
         }
         
         // Setup of Collection View
-        v.collectionView.register(YPFilterCollectionViewCell.self, forCellWithReuseIdentifier: "FilterCell")
-        v.collectionView.dataSource = self
-        v.collectionView.delegate = self
+//        v.collectionView.register(YPFilterCollectionViewCell.self, forCellWithReuseIdentifier: "FilterCell")
+//        v.collectionView.dataSource = self
+//        v.collectionView.delegate = self
 
         view.backgroundColor = YPConfig.colors.filterBackgroundColor
         
