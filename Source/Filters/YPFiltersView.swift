@@ -86,7 +86,7 @@ class YPFiltersView: UIView {
         lblRetake.Bottom == btnRetakeContainer.Bottom
         lblRetake.text = "Ulangi"
         lblRetake.textColor = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1)
-        lblRetake.font = UIFont(name: "Helvetica", size: 14)
+        lblRetake.font = UIFont(name: "Raleway-SemiBold", size: 14)
 
         imgConfirm.Top == btnConfirmContainer.Top
         imgConfirm.Bottom == lblConfirm.Top
@@ -98,7 +98,7 @@ class YPFiltersView: UIView {
         lblConfirm.Bottom == btnConfirmContainer.Bottom
         lblConfirm.text = "Gunakan"
         lblConfirm.textColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
-        lblRetake.font = UIFont(name: "Helvetica", size: 14)
+        lblRetake.font = UIFont(name: "Raleway-SemiBold", size: 14)
         
         imageView.heightEqualsWidth()
         
