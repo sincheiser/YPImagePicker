@@ -111,7 +111,7 @@ extension YPSelectionsGalleryVC: UICollectionViewDelegate {
         switch item {
         case .photo(let photo):
             if !YPConfig.filters.isEmpty, YPConfig.showsPhotoFilters {
-//                mediaFilterVC = YPPhotoFiltersVC(inputPhoto: photo, isFromSelectionVC: true)
+                mediaFilterVC = YPPhotoFiltersVC(inputPhoto: photo, isFromSelectionVC: true)
             }
         case .video(let video):
             if YPConfig.showsVideoTrimmer {

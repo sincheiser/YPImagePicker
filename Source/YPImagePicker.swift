@@ -120,19 +120,20 @@ override open func viewDidLoad() {
                     }
                 }
                 
-                if YPConfig.showsPhotoFilters {
-                    let filterVC = YPPhotoFiltersVC(inputPhoto: photo,
-                                                    isFromSelectionVC: false)
-                    // Show filters and then crop
-                    filterVC.didSave = { outputMedia in
-                        if case let YPMediaItem.photo(outputPhoto) = outputMedia {
-                            showCropVC(photo: outputPhoto, completion: completion)
-                        }
-                    }
-                    self?.pushViewController(filterVC, animated: false)
-                } else {
-                    showCropVC(photo: photo, completion: completion)
-                }
+//                if YPConfig.showsPhotoFilters {
+//                    let filterVC = YPPhotoFiltersVC(inputPhoto: photo,
+//                                                    isFromSelectionVC: false)
+//                    // Show filters and then crop
+//                    filterVC.didSave = { outputMedia in
+//                        if case let YPMediaItem.photo(outputPhoto) = outputMedia {
+//                            showCropVC(photo: outputPhoto, completion: completion)
+//                        }
+//                    }
+//                    self?.pushViewController(filterVC, animated: false)
+//                } else {
+//                    showCropVC(photo: photo, completion: completion)
+//                }
+                showCropVC(photo: photo, completion: completion)
             case .video(let video):
                 if YPConfig.showsVideoTrimmer {
                     let videoFiltersVC = YPVideoFiltersVC.initWith(video: video,
