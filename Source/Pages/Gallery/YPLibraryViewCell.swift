@@ -88,10 +88,10 @@ class YPLibraryViewCell: UICollectionViewCell {
         imageView.clipsToBounds = true
         durationLabel.textColor = .white
         durationLabel.font = YPConfig.fonts.durationFont
-        durationLabel.isHidden = true
+        durationLabel.isHidden = false
         selectionOverlay.backgroundColor = .white
         selectionOverlay.alpha = 0
-        backgroundColor = .blue
+        backgroundColor = .ypSecondarySystemBackground
     }
 
     override var isSelected: Bool {
