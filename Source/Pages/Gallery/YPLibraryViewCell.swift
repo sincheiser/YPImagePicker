@@ -101,6 +101,10 @@ class YPLibraryViewCell: UICollectionViewCell {
         lblUtamaContainer.top(0)
         lblUtamaContainer.Right == multipleSelectionIndicator.Left
         lblUtamaContainer.right(5)
+        lblUtamaContainer.Top == lblUtama.Top
+        lblUtamaContainer.Bottom == lblUtama.Bottom
+        lblUtamaContainer.Right == lblUtama.Right
+        lblUtamaContainer.Left == lblUtama.Left
         |-lblUtama-|
         
         lblUtamaContainer.backgroundColor = UIColor(red: 208/255, green: 2/255, blue: 26/255, alpha: 1)
