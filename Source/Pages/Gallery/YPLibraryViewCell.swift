@@ -13,6 +13,7 @@ class YPMultipleSelectionIndicator: UIView {
     
     let circle = UIView()
     let label = UILabel()
+    let lblA = UILabel()
     var selectionColor = UIColor.ypSystemBlue
 
     convenience init() {
@@ -22,8 +23,10 @@ class YPMultipleSelectionIndicator: UIView {
         
         sv(
             circle,
-            label
+            label,
+            lblA
         )
+        |-lblA
         
         circle.fillContainer()
         circle.size(size)
@@ -33,6 +36,9 @@ class YPMultipleSelectionIndicator: UIView {
         label.textAlignment = .center
         label.textColor = .white
         label.font = YPConfig.fonts.multipleSelectionIndicatorFont
+        
+        lblA.textColor = .blue
+        lblA.text = "Utama"
         
         set(number: nil)
     }
@@ -88,7 +94,7 @@ class YPLibraryViewCell: UICollectionViewCell {
         imageView.clipsToBounds = true
         durationLabel.textColor = .white
         durationLabel.font = YPConfig.fonts.durationFont
-        durationLabel.isHidden = false
+        durationLabel.isHidden = true
         selectionOverlay.backgroundColor = .white
         selectionOverlay.alpha = 0
         backgroundColor = .ypSecondarySystemBackground
