@@ -60,7 +60,8 @@ class YPLibraryViewCell: UICollectionViewCell {
     let durationLabel = UILabel()
     let selectionOverlay = UIView()
     let multipleSelectionIndicator = YPMultipleSelectionIndicator()
-    let lblA = UILabel()
+    let lblUtamaContainer = UIView()
+    let lblUtama = UILabel()
     
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     override init(frame: CGRect) {
@@ -71,7 +72,9 @@ class YPLibraryViewCell: UICollectionViewCell {
             durationLabel,
             selectionOverlay,
             multipleSelectionIndicator,
-            lblA
+            lblUtamaContainer.sv(
+                lblUtama
+            )
         )
 
         imageView.fillContainer()
@@ -94,11 +97,17 @@ class YPLibraryViewCell: UICollectionViewCell {
         selectionOverlay.backgroundColor = .white
         selectionOverlay.alpha = 0
         backgroundColor = .ypSecondarySystemBackground
-        lblA.textColor = .blue
-        lblA.text = "Utama"
-        lblA.top(0)
-        lblA.Right == multipleSelectionIndicator.Left
-        lblA.right(5)
+        
+        lblUtamaContainer.top(0)
+        lblUtamaContainer.Right == multipleSelectionIndicator.Left
+        lblUtamaContainer.right(5)
+        |-lblUtama-|
+        
+        lblUtamaContainer.backgroundColor = UIColor(red: 208/255, green: 2/255, blue: 26/255, alpha: 1)
+        lblUtama.textColor = .white
+        lblUtama.text = "Utama"
+        lblUtama.font = UIFont(name: "Raleway-SemiBold", size: 9)
+        
     }
 
     override var isSelected: Bool {
