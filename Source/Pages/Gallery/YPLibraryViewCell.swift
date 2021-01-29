@@ -13,7 +13,6 @@ class YPMultipleSelectionIndicator: UIView {
     
     let circle = UIView()
     let label = UILabel()
-    let lblA = UILabel()
     var selectionColor = UIColor.ypSystemBlue
 
     convenience init() {
@@ -23,10 +22,8 @@ class YPMultipleSelectionIndicator: UIView {
         
         sv(
             circle,
-            label,
-            lblA
+            label
         )
-        |-lblA
         
         circle.fillContainer()
         circle.size(size)
@@ -36,9 +33,6 @@ class YPMultipleSelectionIndicator: UIView {
         label.textAlignment = .center
         label.textColor = .white
         label.font = YPConfig.fonts.multipleSelectionIndicatorFont
-        
-        lblA.textColor = .blue
-        lblA.text = "Utama"
         
         set(number: nil)
     }
@@ -66,6 +60,7 @@ class YPLibraryViewCell: UICollectionViewCell {
     let durationLabel = UILabel()
     let selectionOverlay = UIView()
     let multipleSelectionIndicator = YPMultipleSelectionIndicator()
+    let lblA = UILabel()
     
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     override init(frame: CGRect) {
@@ -75,7 +70,8 @@ class YPLibraryViewCell: UICollectionViewCell {
             imageView,
             durationLabel,
             selectionOverlay,
-            multipleSelectionIndicator
+            multipleSelectionIndicator,
+            lblA
         )
 
         imageView.fillContainer()
@@ -87,7 +83,8 @@ class YPLibraryViewCell: UICollectionViewCell {
         
         layout(
             3,
-            multipleSelectionIndicator-3-|
+            multipleSelectionIndicator-3-|,
+            |-3-lblA
         )
         
         imageView.contentMode = .scaleAspectFill
@@ -98,6 +95,8 @@ class YPLibraryViewCell: UICollectionViewCell {
         selectionOverlay.backgroundColor = .white
         selectionOverlay.alpha = 0
         backgroundColor = .ypSecondarySystemBackground
+        lblA.textColor = .blue
+        lblA.text = "Utama"
     }
 
     override var isSelected: Bool {
