@@ -83,8 +83,7 @@ class YPLibraryViewCell: UICollectionViewCell {
         
         layout(
             3,
-            multipleSelectionIndicator-3-|,
-            |-3-lblA
+            multipleSelectionIndicator-3-|
         )
         
         imageView.contentMode = .scaleAspectFill
@@ -97,6 +96,9 @@ class YPLibraryViewCell: UICollectionViewCell {
         backgroundColor = .ypSecondarySystemBackground
         lblA.textColor = .blue
         lblA.text = "Utama"
+        lblA.top(0)
+        lblA.Right == multipleSelectionIndicator.Left
+        lblA.right(5)
     }
 
     override var isSelected: Bool {
