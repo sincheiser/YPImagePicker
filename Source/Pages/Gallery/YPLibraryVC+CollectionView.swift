@@ -160,6 +160,7 @@ extension YPLibraryVC: UICollectionViewDelegate {
             cell.setHidden(number: index+1)
         } else {
             cell.multipleSelectionIndicator.set(number: nil)
+            cell.setHidden(number: nil)
         }
 
         // Prevent weird animation where thumbnail fills cell on first scrolls.

@@ -131,7 +131,7 @@ class YPLibraryViewCell: UICollectionViewCell {
         selectionOverlay.alpha = showOverlay ? 0.6 : 0
     }
     
-    func setHidden(number: Int) {
+    func setHidden(number: Int?) {
         if number == 1 {
             lblUtamaContainer.isHidden = false
         } else {
