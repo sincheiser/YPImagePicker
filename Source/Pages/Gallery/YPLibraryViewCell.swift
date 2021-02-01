@@ -115,6 +115,7 @@ class YPLibraryViewCell: UICollectionViewCell {
         lblUtama.text = "Utama"
         lblUtama.font = UIFont(name: "Raleway-SemiBold", size: 9)
         
+        lblUtamaContainer.isHidden = true
     }
 
     override var isSelected: Bool {
@@ -128,5 +129,13 @@ class YPLibraryViewCell: UICollectionViewCell {
     private func refreshSelection() {
         let showOverlay = isSelected || isHighlighted
         selectionOverlay.alpha = showOverlay ? 0.6 : 0
+    }
+    
+    func setHidden(number: Int) {
+        if number == 1 {
+            lblUtamaContainer.isHidden = false
+        } else {
+            lblUtamaContainer.isHidden = true
+        }
     }
 }

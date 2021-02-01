@@ -157,6 +157,7 @@ extension YPLibraryVC: UICollectionViewDelegate {
                                                       assetIdentifier: currentSelection.assetIdentifier)
             }
             cell.multipleSelectionIndicator.set(number: index + 1) // start at 1, not 0
+            cell.setHidden(number: index+1)
         } else {
             cell.multipleSelectionIndicator.set(number: nil)
         }
