@@ -98,10 +98,12 @@ class YPLibraryViewCell: UICollectionViewCell {
         selectionOverlay.alpha = 0
         backgroundColor = .ypSecondarySystemBackground
         
-        multipleSelectionIndicator.right(5)
+        let c = NSLayoutConstraint(item: lblUtamaContainer, attribute: .right, relatedBy: .equal, toItem: multipleSelectionIndicator, attribute: .left, multiplier: 1, constant: 5)
+        c.priority = UILayoutPriority(rawValue: 971) // Make a constraint `required`
+        addConstraint(c)
         
         lblUtamaContainer.top(5)
-        lblUtamaContainer.left(15)
+        lblUtamaContainer.Right == multipleSelectionIndicator.Left
         lblUtamaContainer.Top == lblUtama.Top
         lblUtamaContainer.Bottom == lblUtama.Bottom
         lblUtamaContainer.Right == lblUtama.Right
