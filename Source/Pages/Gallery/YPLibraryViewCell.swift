@@ -98,6 +98,8 @@ class YPLibraryViewCell: UICollectionViewCell {
         selectionOverlay.alpha = 0
         backgroundColor = .ypSecondarySystemBackground
         
+        multipleSelectionIndicator.right(5)
+        
         lblUtamaContainer.top(0)
         lblUtamaContainer.Right == multipleSelectionIndicator.Left
         lblUtamaContainer.right(5)
