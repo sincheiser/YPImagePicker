@@ -98,7 +98,7 @@ class YPLibraryViewCell: UICollectionViewCell {
         selectionOverlay.alpha = 0
         backgroundColor = .ypSecondarySystemBackground
         
-        let c = NSLayoutConstraint(item: lblUtamaContainer, attribute: .right, relatedBy: .equal, toItem: multipleSelectionIndicator, attribute: .left, multiplier: 1, constant: 15)
+        let c = NSLayoutConstraint(item: multipleSelectionIndicator, attribute: .right, relatedBy: .equal, toItem: lblUtamaContainer, attribute: .left, multiplier: 1, constant: 15)
         c.priority = UILayoutPriority(rawValue: 971) // Make a constraint `required`
         addConstraint(c)
         
