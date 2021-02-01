@@ -101,8 +101,7 @@ class YPLibraryViewCell: UICollectionViewCell {
         multipleSelectionIndicator.right(5)
         
         lblUtamaContainer.top(0)
-        lblUtamaContainer.Right == multipleSelectionIndicator.Left
-        lblUtamaContainer.right(5)
+        lblUtamaContainer.left(5)
         lblUtamaContainer.Top == lblUtama.Top
         lblUtamaContainer.Bottom == lblUtama.Bottom
         lblUtamaContainer.Right == lblUtama.Right
