@@ -158,11 +158,9 @@ extension YPLibraryVC: UICollectionViewDelegate {
             }
             cell.multipleSelectionIndicator.set(number: index + 1) // start at 1, not 0
             cell.setHidden(number: index+1)
-            self.v.setupHiddenLabel(index: index+1)
         } else {
             cell.multipleSelectionIndicator.set(number: nil)
             cell.setHidden(number: nil)
-            self.v.setupHiddenLabel(index: nil)
         }
 
         // Prevent weird animation where thumbnail fills cell on first scrolls.
@@ -175,7 +173,7 @@ extension YPLibraryVC: UICollectionViewDelegate {
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let previouslySelectedIndexPath = IndexPath(row: currentlySelectedIndex, section: 0)
         currentlySelectedIndex = indexPath.row
-
+        self.v.setupHiddenLabel(index: currentlySelectedIndex+1)
         changeAsset(mediaManager.fetchResult[indexPath.row])
         panGestureHelper.resetToOriginalState()
         
