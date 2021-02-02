@@ -42,8 +42,7 @@ final class YPLibraryView: UIView {
         
         setupMaxNumberOfItemsView()
         setupProgressBarView()
-        
-        icLblUtama.isHidden = true
+        setupHiddenLabel(index: nil)
     }
     
     /// At the bottom there is a view that is visible when selected a limit of items with multiple selection
@@ -85,6 +84,14 @@ final class YPLibraryView: UIView {
         progressView.progressTintColor = YPConfig.colors.progressBarCompletedColor ?? YPConfig.colors.tintColor
         progressView.isHidden = true
         progressView.isUserInteractionEnabled = false
+    }
+    
+    func setupHiddenLabel(index: Int?) {
+        if index == 1 {
+            icLblUtama.isHidden = false
+        } else {
+            icLblUtama.isHidden = true
+        }
     }
 }
 
