@@ -18,6 +18,7 @@ final class YPLibraryView: UIView {
     @IBOutlet weak var assetZoomableView: YPAssetZoomableView!
     @IBOutlet weak var assetViewContainer: YPAssetViewContainer!
     @IBOutlet weak var assetViewContainerConstraintTop: NSLayoutConstraint!
+    @IBOutlet weak var icLblUtama: UIImageView!
     
     let maxNumberWarningView = UIView()
     let maxNumberWarningLabel = UILabel()
@@ -41,6 +42,8 @@ final class YPLibraryView: UIView {
         
         setupMaxNumberOfItemsView()
         setupProgressBarView()
+        
+        icLblUtama.isHidden = true
     }
     
     /// At the bottom there is a view that is visible when selected a limit of items with multiple selection

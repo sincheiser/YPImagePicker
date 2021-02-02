@@ -81,6 +81,7 @@
                 <outlet property="assetViewContainerConstraintTop" destination="u5j-7G-j99" id="FfD-fg-8ch"/>
                 <outlet property="assetZoomableView" destination="Mc5-1c-z7q" id="sGM-mc-f2B"/>
                 <outlet property="collectionView" destination="6id-Ro-HHC" id="NDT-3i-ayr"/>
+                <outlet property="icLblUtama" destination="zdE-xX-xcD" id="MlG-7I-tAc"/>
             </connections>
             <point key="canvasLocation" x="-160" y="92"/>
         </view>

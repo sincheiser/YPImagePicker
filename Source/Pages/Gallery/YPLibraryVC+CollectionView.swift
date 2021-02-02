@@ -158,9 +158,16 @@ extension YPLibraryVC: UICollectionViewDelegate {
             }
             cell.multipleSelectionIndicator.set(number: index + 1) // start at 1, not 0
             cell.setHidden(number: index+1)
+            
+            if index == 1 {
+                self.v.icLblUtama.isHidden = false
+            } else {
+                self.v.icLblUtama.isHidden = true
+            }
         } else {
             cell.multipleSelectionIndicator.set(number: nil)
             cell.setHidden(number: nil)
+            self.v.icLblUtama.isHidden = true
         }
 
         // Prevent weird animation where thumbnail fills cell on first scrolls.
