@@ -112,7 +112,6 @@ class YPLibraryViewCell: UICollectionViewCell {
         |-imgLblUtama-|
         imgLblUtama.image = imageFromBundle("ic_utama")
         
-        lblUtamaContainer.backgroundColor = UIColor(red: 208/255, green: 2/255, blue: 26/255, alpha: 1)
         
         lblUtamaContainer.isHidden = true
     }
