@@ -61,7 +61,7 @@ class YPLibraryViewCell: UICollectionViewCell {
     let selectionOverlay = UIView()
     let multipleSelectionIndicator = YPMultipleSelectionIndicator()
     let lblUtamaContainer = UIView()
-    let lblUtama = UILabel()
+    let imgLblUtama = UIImageView()
     
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     override init(frame: CGRect) {
@@ -73,7 +73,7 @@ class YPLibraryViewCell: UICollectionViewCell {
             selectionOverlay,
             multipleSelectionIndicator,
             lblUtamaContainer.sv(
-                lblUtama
+                imgLblUtama
             )
         )
 
@@ -104,16 +104,15 @@ class YPLibraryViewCell: UICollectionViewCell {
         
         lblUtamaContainer.top(5)
         lblUtamaContainer.Right == multipleSelectionIndicator.Left
-        lblUtamaContainer.Top == lblUtama.Top
-        lblUtamaContainer.Bottom == lblUtama.Bottom
-        lblUtamaContainer.Right == lblUtama.Right
-        lblUtamaContainer.Left == lblUtama.Left
-        |-lblUtama-|
+        lblUtamaContainer.Top == imgLblUtama.Top
+        lblUtamaContainer.Bottom == imgLblUtama.Bottom
+        lblUtamaContainer.Right == imgLblUtama.Right
+        lblUtamaContainer.Left == imgLblUtama.Left
+    
+        |-imgLblUtama-|
+        imgLblUtama.image = imageFromBundle("ic_utama")
         
         lblUtamaContainer.backgroundColor = UIColor(red: 208/255, green: 2/255, blue: 26/255, alpha: 1)
-        lblUtama.textColor = .white
-        lblUtama.text = "Utama"
-        lblUtama.font = UIFont(name: "Raleway-SemiBold", size: 9)
         
         lblUtamaContainer.isHidden = true
     }
