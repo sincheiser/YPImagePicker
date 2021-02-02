@@ -42,7 +42,6 @@ final class YPLibraryView: UIView {
         
         setupMaxNumberOfItemsView()
         setupProgressBarView()
-        setupHiddenLabel(index: nil)
     }
     
     /// At the bottom there is a view that is visible when selected a limit of items with multiple selection
@@ -87,10 +86,13 @@ final class YPLibraryView: UIView {
     }
     
     func setupHiddenLabel(index: Int?) {
+        print("Index = \(index)")
         if index == 1 {
             icLblUtama.isHidden = false
+            print("Masuk True")
         } else {
             icLblUtama.isHidden = true
+            print("Masuk False")
         }
     }
 }
