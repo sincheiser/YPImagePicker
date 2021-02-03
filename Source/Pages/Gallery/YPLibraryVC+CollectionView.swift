@@ -173,7 +173,6 @@ extension YPLibraryVC: UICollectionViewDelegate {
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let previouslySelectedIndexPath = IndexPath(row: currentlySelectedIndex, section: 0)
         currentlySelectedIndex = indexPath.row
-        self.v.setupHiddenLabel(index: currentlySelectedIndex)
         changeAsset(mediaManager.fetchResult[indexPath.row])
         panGestureHelper.resetToOriginalState()
         
@@ -195,6 +194,13 @@ extension YPLibraryVC: UICollectionViewDelegate {
             }
             collectionView.reloadItems(at: [indexPath])
             collectionView.reloadItems(at: [previouslySelectedIndexPath])
+            
+            let asset = mediaManager.fetchResult[indexPath.item]
+            if let index = selection.firstIndex(where: { $0.assetIdentifier == asset.localIdentifier }) {
+                self.v.setupHiddenLabel(index: index+1)
+            } else {
+                self.v.setupHiddenLabel(index: nil)
+            }
         } else {
             selection.removeAll()
             addToSelection(indexPath: indexPath)
