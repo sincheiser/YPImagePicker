@@ -61,7 +61,7 @@ extension YPLibraryVC {
 			$0.assetIdentifier == mediaManager.fetchResult[indexPath.row].localIdentifier
 		}) {
             selection.remove(at: positionIndex)
-
+            self.v.setupHiddenLabel(index: nil)
             // Refresh the numbers
             var selectedIndexPaths = [IndexPath]()
             mediaManager.fetchResult.enumerateObjects { [unowned self] (asset, index, _) in
