@@ -86,13 +86,10 @@ final class YPLibraryView: UIView {
     }
     
     func setupHiddenLabel(index: Int?) {
-        print("Index = \(index)")
         if index == 1 {
             icLblUtama.isHidden = false
-            print("Masuk True")
         } else {
             icLblUtama.isHidden = true
-            print("Masuk False")
         }
     }
 }

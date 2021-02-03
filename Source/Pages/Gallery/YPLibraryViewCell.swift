@@ -112,7 +112,6 @@ class YPLibraryViewCell: UICollectionViewCell {
         |-imgLblUtama-|
         imgLblUtama.image = imageFromBundle("ic_utama")
         
-        
         lblUtamaContainer.isHidden = true
     }
 
